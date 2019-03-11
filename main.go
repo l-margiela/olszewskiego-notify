@@ -101,7 +101,7 @@ func propagate(twilio *gotwilio.Twilio, subs []string, from, text string) error 
 func main() {
 	conf, err := loadConfig()
 	if err != nil {
-		log.Fatalf("load config: " + err.Error())
+		log.Fatalf("load config: %s", err)
 	}
 
 	twilio := gotwilio.NewTwilioClient(conf.AccountSID, conf.AuthToken)
