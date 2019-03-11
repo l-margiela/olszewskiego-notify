@@ -1,0 +1,6 @@
+account-sid: ""
+auth-token: ""
+notification-text: "SMS body"
+number: "phone number or {10}[a-zA-Z0-9]"
+subscribers:
+  - "+01234567890"
