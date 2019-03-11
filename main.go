@@ -50,7 +50,7 @@ func loadConfig() (config, error) {
 	confPath := flag.String("config", "", "Config path")
 	flag.Parse()
 
-	if *confPath == "" {
+	if *confPath != "" {
 		f, err := ioutil.ReadFile(*confPath)
 		if err != nil {
 			return conf, err
