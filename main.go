@@ -13,18 +13,6 @@ import (
 	"github.com/sfreiberg/gotwilio"
 )
 
-type subscribers []string
-
-func (subs *subscribers) Set(v string) error {
-	*subs = strings.Split(v, ",")
-
-	return nil
-}
-
-func (subs subscribers) String() string {
-	return strings.Join(subs, ", ")
-}
-
 type config struct {
 	AccountSID       string   `yaml:"account-sid"`
 	AuthToken        string   `yaml:"auth-token"`
